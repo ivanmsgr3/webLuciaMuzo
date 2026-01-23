@@ -2,17 +2,20 @@
     padding: 100px 0;
     background-color: transparent;
     position: relative;
-    color: #ffffff;
+    /* Removed background-image/attachment for manual parallax */
+}
+
+.parallaxBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
     background-image: url('/gallery/Sobre-mi.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-    .about {
-        background-attachment: scroll;
-    }
+    pointer-events: none;
 }
 
 .about::before {

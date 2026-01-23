@@ -10,16 +10,28 @@ import FullWidthImage from '@/components/FullWidthImage';
 
 export default function Home() {
     return (
-        <main>
+        <main className="relative">
             <Header />
-            <Hero />
+            <div className="relative z-10 bg-stone-50">
+                <Hero />
+            </div>
             <About />
-            <Services />
-            <Gallery />
+            <div className="relative z-10 bg-stone-50">
+                <Services />
+            </div>
+            <div className="relative z-10 bg-white">
+                <Gallery />
+            </div>
             <FullWidthImage src="/gallery/web.jpg" alt="Full width portfolio shot" />
-            <Brands />
-            <Contact />
-            <Footer />
+            <div className="relative z-10 bg-stone-50">
+                <Brands />
+            </div>
+            <div className="relative z-10 bg-white">
+                <Contact />
+            </div>
+            <div className="relative z-10">
+                <Footer />
+            </div>
         </main>
     );
 }
