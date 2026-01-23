@@ -4,7 +4,6 @@ import styles from './About.module.css';
 const About = () => {
     return (
         <section id="sobre-mi" className={styles.about}>
-            <div className={styles.parallaxBg} />
             <div className={styles.container}>
                 <div className={styles.grid}>
                     <div className={styles.textContent}>
