@@ -1,0 +1,219 @@
+.services {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionLabel {
+    font-size: 0.875rem;
+    color: var(--color-rose);
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.title {
+    margin-bottom: 3rem;
+    line-height: 1.1;
+}
+
+.titleMain {
+    font-family: var(--font-archivo);
+    font-weight: 700;
+    font-size: 4rem;
+    color: #cbc0ad;
+}
+
+.titleAccent {
+    font-family: var(--font-passions);
+    font-size: 5rem;
+    color: #eeb0bf;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.125rem;
+    background-color: var(--color-white);
+    color: var(--color-stone-600);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-archivo);
+    font-size: 0.95rem;
+}
+
+.tab:hover {
+    background-color: var(--color-stone-100);
+}
+
+.tabActive {
+    background-color: var(--color-rose);
+    color: var(--color-white);
+}
+
+.serviceCard {
+    max-width: 42rem;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.serviceTitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-stone-800);
+    margin-bottom: 0.5rem;
+}
+
+.serviceDescription {
+    color: var(--color-stone-600);
+    margin-bottom: 1rem;
+}
+
+.servicePrice {
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: var(--color-rose);
+    margin-bottom: 1.5rem;
+}
+
+.featureList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: flex-start;
+}
+
+.bullet {
+    color: var(--color-rose);
+    margin-right: 0.5rem;
+}
+
+.bridalSection {
+    margin-top: 5rem;
+}
+
+.bridalTitle {
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: var(--color-stone-800);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: var(--font-spectral);
+}
+
+.packagesGrid {
+    display: grid;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .packagesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.packageCard {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.packageCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.packagePopular {
+    border: 2px solid var(--color-rose);
+}
+
+.popularBadge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color-rose);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-bottom-left-radius: 0.125rem;
+    font-weight: 500;
+}
+
+.packageName {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-stone-800);
+    margin-bottom: 0.5rem;
+}
+
+.packagePrice {
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: var(--color-rose);
+    margin-bottom: 1.5rem;
+}
+
+.packageFeatures {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.packageFeature {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.875rem;
+    color: var(--color-stone-600);
+}
+
+.checkmark {
+    color: var(--color-rose);
+    margin-right: 0.5rem;
+    font-weight: 600;
+}

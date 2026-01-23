@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+.carouselWrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+.carouselWrapper::before,
+.carouselWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carouselWrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(245, 242, 238, 1), transparent);
+}
+
+.carouselWrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(245, 242, 238, 1), transparent);
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 4rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.carouselTrack:hover {
+    animation-play-state: paused;
+}
+
+.brandItem {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #cbc0ad;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.brandItem:hover {
+    color: #8b7355;
+    transform: scale(1.1);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .brandItem {
+        font-size: 2rem;
+    }
+
+    .carouselTrack {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brandItem {
+        font-size: 1.5rem;
+    }
+
+    .carouselTrack {
+        gap: 2rem;
+    }
+}

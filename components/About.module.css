@@ -1,0 +1,159 @@
+.about {
+    padding: 100px 0;
+    background-color: transparent;
+    position: relative;
+    color: #ffffff;
+    background-image: url('/gallery/Sobre-mi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+.grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.sectionLabel {
+    font-size: 0.875rem;
+    color: #f7f4eb;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 1px solid #f7f4eb;
+    padding-bottom: 5px;
+}
+
+.title {
+    margin: 0 0 1rem;
+    line-height: 1.1;
+}
+
+.titleMain {
+    font-family: var(--font-archivo);
+    /* Sans-serif */
+    font-weight: 700;
+    font-size: 4rem;
+    color: #cbc0ad;
+    /* Tan/Brown */
+}
+
+.titleAccent {
+    font-family: var(--font-passions);
+    /* Cursive */
+    font-size: 5rem;
+    color: #eeb0bf;
+    /* Pink */
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+.introHeading {
+    font-family: var(--font-spectral);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #cbc0ad;
+    margin-bottom: 2rem;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.introHeading br {
+    display: block;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.paragraph {
+    font-family: 'Spectral', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.italic {
+    font-style: italic;
+    font-family: 'Spectral', serif;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.featureCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.featureCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.featureCardAccent {
+    background-color: rgba(253, 242, 245, 0.1);
+}
+
+.featureTitle {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #eeb0bf;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-spectral);
+}
+
+.featureText {
+    font-size: 0.875rem;
+    color: #f7f4eb;
+    line-height: 1.6;
+}

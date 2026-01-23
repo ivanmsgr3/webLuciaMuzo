@@ -1,0 +1,181 @@
+/* ===================================
+   COCO Makeup - Global Styles
+   =================================== */
+
+/* CSS Variables - Color Palette */
+:root {
+  /* Primary Colors */
+  --color-tan: #cbc0ad;
+  --color-cream: #f7f4eb;
+  --color-rose: #eeb0bf;
+  
+  /* Neutral Colors */
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-400: #a8a29e;
+  --color-stone-600: #57534e;
+  --color-stone-800: #292524;
+  
+  /* White & Black */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  /* Fonts */
+  --font-archivo: 'Archivo', sans-serif;
+  --font-passions: 'Passions Conflict', cursive;
+  --font-spectral: 'Spectral', serif;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-archivo);
+  background-color: var(--color-cream);
+  color: var(--color-stone-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.font-passions {
+  font-family: var(--font-passions);
+}
+
+.font-spectral {
+  font-family: var(--font-spectral);
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 0.125rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-archivo);
+}
+
+.btn-primary {
+  background-color: var(--color-rose);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #e89aad;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 176, 191, 0.3);
+}
+
+/* Card Styles */
+.card {
+  background: var(--color-white);
+  border-radius: 0.25rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Section Spacing */
+.section {
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth Transitions */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--color-rose);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-rose);
+  color: var(--color-white);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-tan);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose);
+}
