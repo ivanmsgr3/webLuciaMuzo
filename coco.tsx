@@ -1,9 +1,32 @@
 import React, { useState } from 'react';
 import { Menu, X, Instagram, Mail, Phone, ChevronDown } from 'lucide-react';
 
+const services = {
+  social: {
+    title: 'Maquillaje Social',
+    description: 'Para bodas, eventos o sesiones fotográficas',
+    price: '65€',
+    features: ['Hidratante y hipoalergénico', 'Fijación de larga duración', 'Desplazamiento: 10€ - 50€']
+  },
+  editorial: {
+    title: 'Sesiones Editoriales',
+    description: 'Producciones de moda, retratos y acompañamiento retoque',
+    price: '50€/hora',
+    features: ['Ideal para producciones profesionales', 'Retoque incluido', 'Desplazamiento: 10€ - 50€']
+  },
+  automaquillaje: {
+    title: 'Automaquillaje',
+    description: 'Sesión práctica personalizada',
+    price: '60€/hora',
+    features: ['Productos incluidos', 'Aprende técnicas profesionales', 'Desplazamiento: 10€ - 50€']
+  }
+};
+
+type ServiceKey = keyof typeof services;
+
 const CocoMakeupWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeService, setActiveService] = useState('social');
+  const [activeService, setActiveService] = useState<ServiceKey>('social');
 
   const navigation = [
     { name: 'Inicio', href: '#inicio' },
@@ -13,26 +36,7 @@ const CocoMakeupWebsite = () => {
     { name: 'Contacto', href: '#contacto' }
   ];
 
-  const services = {
-    social: {
-      title: 'Maquillaje Social',
-      description: 'Para bodas, eventos o sesiones fotográficas',
-      price: '65€',
-      features: ['Hidratante y hipoalergénico', 'Fijación de larga duración', 'Desplazamiento: 10€ - 50€']
-    },
-    editorial: {
-      title: 'Sesiones Editoriales',
-      description: 'Producciones de moda, retratos y acompañamiento retoque',
-      price: '50€/hora',
-      features: ['Ideal para producciones profesionales', 'Retoque incluido', 'Desplazamiento: 10€ - 50€']
-    },
-    automaquillaje: {
-      title: 'Automaquillaje',
-      description: 'Sesión práctica personalizada',
-      price: '60€/hora',
-      features: ['Productos incluidos', 'Aprende técnicas profesionales', 'Desplazamiento: 10€ - 50€']
-    }
-  };
+
 
   const bridalPackages = [
     {
@@ -65,8 +69,8 @@ const CocoMakeupWebsite = () => {
   ];
 
   const brands = [
-    'Chanel', 'Lancôme', 'Patrick Ta', 'Huda Beauty', 
-    'NARS', 'Charlotte Tilbury', 'YSL', 'Makeup Forever', 
+    'Chanel', 'Lancôme', 'Patrick Ta', 'Huda Beauty',
+    'NARS', 'Charlotte Tilbury', 'YSL', 'Makeup Forever',
     'Fenty Beauty', 'Rare Beauty', 'ABH'
   ];
 
@@ -81,7 +85,7 @@ const CocoMakeupWebsite = () => {
                 COCO<span className="text-rose-400">.</span>
               </h1>
             </div>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {navigation.map((item) => (
@@ -190,15 +194,14 @@ const CocoMakeupWebsite = () => {
 
           {/* Service Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.keys(services).map((key) => (
+            {(Object.keys(services) as ServiceKey[]).map((key) => (
               <button
                 key={key}
                 onClick={() => setActiveService(key)}
-                className={`px-6 py-2 rounded-sm transition-colors ${
-                  activeService === key
-                    ? 'bg-rose-400 text-white'
-                    : 'bg-white text-stone-600 hover:bg-stone-100'
-                }`}
+                className={`px-6 py-2 rounded-sm transition-colors ${activeService === key
+                  ? 'bg-rose-400 text-white'
+                  : 'bg-white text-stone-600 hover:bg-stone-100'
+                  }`}
               >
                 {services[key].title}
               </button>
@@ -233,9 +236,8 @@ const CocoMakeupWebsite = () => {
               {bridalPackages.map((pkg, idx) => (
                 <div
                   key={idx}
-                  className={`bg-white p-8 rounded-sm shadow-sm relative ${
-                    pkg.popular ? 'border-2 border-rose-400' : ''
-                  }`}
+                  className={`bg-white p-8 rounded-sm shadow-sm relative ${pkg.popular ? 'border-2 border-rose-400' : ''
+                    }`}
                 >
                   {pkg.popular && (
                     <span className="absolute top-0 right-0 bg-rose-400 text-white text-xs px-3 py-1 rounded-bl-sm">
@@ -266,8 +268,8 @@ const CocoMakeupWebsite = () => {
             <h3 className="text-sm text-rose-400 tracking-widest mb-4">03. GALERÍA</h3>
             <h2 className="text-4xl font-light text-stone-800 mb-4">Mis Trabajos</h2>
             <p className="text-stone-600 max-w-3xl mx-auto italic">
-              "Cada maquillaje es un trabajo hecho a medida. Cada rostro transmite la belleza de su esencia. 
-              Cada imagen refleja mi compromiso por crear looks pulidos, simétricos y en armonía cromática, 
+              "Cada maquillaje es un trabajo hecho a medida. Cada rostro transmite la belleza de su esencia.
+              Cada imagen refleja mi compromiso por crear looks pulidos, simétricos y en armonía cromática,
               para acompañarte y realzarte en tu ocasión especial"
             </p>
           </div>
@@ -290,8 +292,8 @@ const CocoMakeupWebsite = () => {
             <h3 className="text-sm text-rose-400 tracking-widest mb-4">04. PRODUCTOS</h3>
             <h2 className="text-4xl font-light text-stone-800 mb-4">Calidad en Cada Detalle</h2>
             <p className="text-stone-600 max-w-3xl mx-auto">
-              Utilizo exclusivamente productos de las mejores marcas en la industria del maquillaje. 
-              Mis productos son seleccionados no solo por su rendimiento, sino también por su capacidad 
+              Utilizo exclusivamente productos de las mejores marcas en la industria del maquillaje.
+              Mis productos son seleccionados no solo por su rendimiento, sino también por su capacidad
               para realzar la belleza natural sin dañar la piel.
             </p>
           </div>
@@ -315,7 +317,7 @@ const CocoMakeupWebsite = () => {
             <h3 className="text-sm text-rose-400 tracking-widest mb-4">05. CONTACTO</h3>
             <h2 className="text-4xl font-light text-stone-800 mb-4">Conexión Directa y Exclusiva</h2>
             <p className="text-stone-600 italic">
-              "Estoy aquí para hacer que tu belleza se vea tal y como siempre la imaginaste. 
+              "Estoy aquí para hacer que tu belleza se vea tal y como siempre la imaginaste.
               No dudes en ponerte en contacto conmigo para reservar tu sesión o para más información."
             </p>
           </div>
@@ -356,7 +358,7 @@ const CocoMakeupWebsite = () => {
           <div className="text-center">
             <h3 className="text-2xl font-light mb-4">COCO<span className="text-rose-400">.</span></h3>
             <p className="text-stone-400 max-w-2xl mx-auto italic text-sm mb-6">
-              "La belleza no se crea, se revela. Con mi servicio de maquillaje, no solo te hago lucir bien, 
+              "La belleza no se crea, se revela. Con mi servicio de maquillaje, no solo te hago lucir bien,
               sino que te hago sentir aún mejor. La técnica la pongo yo, pero la esencia te pertenece a ti."
             </p>
             <p className="text-stone-500 text-sm">
