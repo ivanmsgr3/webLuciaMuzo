@@ -42,7 +42,9 @@ export const metadata: Metadata = {
 };
 
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Header from '@/components/Header';
 import CookieBanner from '@/components/CookieBanner';
+import Footer from '@/components/Footer';
 
 export default function RootLayout({
     children,
@@ -52,7 +54,9 @@ export default function RootLayout({
     return (
         <html lang="es" className={`${archivo.variable} ${passionsConflict.variable} ${spectral.variable}`}>
             <body className={archivo.className}>
+                <Header />
                 {children}
+                <Footer />
                 <WhatsAppButton />
                 <CookieBanner />
             </body>

@@ -1,14 +1,14 @@
 .about {
     padding: 100px 0;
     position: relative;
-    /* Create a stacking context and clip the fixed child to this box */
-    clip-path: inset(0);
-    -webkit-clip-path: inset(0);
     background-color: transparent;
+    background-image: url('/gallery/Sobre-mi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.parallaxBg {
-    /* Fixed to viewport, but clipped by parent */
+/* .parallaxBg {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,9 +20,8 @@
     background-size: cover;
     background-position: center;
     pointer-events: none;
-    /* Optional: Improves performance */
     will-change: transform;
-}
+} */
 
 .about::before {
     content: '';

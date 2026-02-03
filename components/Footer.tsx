@@ -17,6 +17,9 @@ const Footer = () => {
                         © {new Date().getFullYear()} COCO Makeup. Todos los derechos reservados.
                     </p>
                     <p className={styles.developer}>
+                        Siguenos en <a href="https://www.tiktok.com/@byco.comakeup" target="_blank" rel="noopener noreferrer" className="hover:underline">TikTok</a>
+                    </p>
+                    <p className={styles.developer}>
                         Desarrollado por <a href="https://nazarcode.com/" target="_blank" rel="noopener noreferrer">NAZARCODE</a>
                     </p>
                 </div>

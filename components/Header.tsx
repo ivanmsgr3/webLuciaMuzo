@@ -8,11 +8,12 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navigation = [
-        { name: 'Inicio', href: '#inicio' },
-        { name: 'Sobre Mí', href: '#sobre-mi' },
-        { name: 'Servicios', href: '#servicios' },
-        { name: 'Galería', href: '#galeria' },
-        { name: 'Contacto', href: '#contacto' }
+        { name: 'Inicio', href: '/#inicio' },
+        { name: 'Sobre Mí', href: '/#sobre-mi' },
+        { name: 'Servicios', href: '/#servicios' },
+        { name: 'Galería', href: '/#galeria' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contacto', href: '/#contacto' }
     ];
 
     return (
@@ -20,7 +21,7 @@ const Header = () => {
             <nav className={styles.nav}>
                 <div className={styles.container}>
                     <div className={styles.logo}>
-                        <a href="#inicio">
+                        <a href="/#inicio">
                             <img src="/logos/NEGRO.png" alt="COCO" height={60} />
                         </a>
                     </div>

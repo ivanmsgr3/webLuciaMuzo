@@ -10,14 +10,14 @@ const Gallery = () => {
 
     // Placeholder images - Replace these paths with your actual portfolio images
     const images = [
-        { src: '/gallery/trabajo-1.jpg', alt: 'Maquillaje de novia elegante' },
-        { src: '/gallery/trabajo-2.jpg', alt: 'Maquillaje social para evento' },
-        { src: '/gallery/trabajo-3.jpg', alt: 'Sesión editorial de moda' },
-        { src: '/gallery/trabajo-4.jpg', alt: 'Maquillaje natural y luminoso' },
-        { src: '/gallery/trabajo-5.jpg', alt: 'Look sofisticado para boda' },
-        { src: '/gallery/trabajo-6.jpg', alt: 'Maquillaje artístico profesional' },
+        { src: '/gallery/WhatsApp Image 2026-01-23 at 14.40.46.jpg', alt: 'Trabajo de maquillaje 1' },
         { src: '/gallery/trabajo-7.jpg', alt: 'Maquillaje de alta costura' },
-        { src: '/gallery/trabajo-8.jpg', alt: 'Maquillaje de pasarela' },
+        { src: '/gallery/WhatsApp Image 2026-01-23 at 14.40.46 (1).jpg', alt: 'Trabajo de maquillaje 3' },
+        { src: '/gallery/trabajo-5.jpg', alt: 'Look sofisticado para boda' },
+        { src: '/gallery/trabajo-1.jpg', alt: 'Maquillaje de novia elegante' },
+        { src: '/gallery/WhatsApp Image 2026-01-23 at 14.40.47 (6).jpg', alt: 'Trabajo de maquillaje 6' },
+        { src: '/gallery/WhatsApp Image 2026-01-23 at 14.40.47 (5).jpg', alt: 'Trabajo de maquillaje 7' },
+        { src: '/gallery/WhatsApp Image 2026-01-23 at 14.40.47.jpg', alt: 'Trabajo de maquillaje 8' },
     ];
 
     const nextSlide = () => {
