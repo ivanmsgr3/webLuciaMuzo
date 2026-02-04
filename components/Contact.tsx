@@ -5,6 +5,7 @@ import styles from './Contact.module.css';
 const Contact = () => {
     return (
         <section id="contacto" className={styles.contact}>
+            <div className={styles.parallaxBg} />
             <div className={styles.container}>
                 <div className={styles.header}>
                     {/* <h3 className={styles.sectionLabel}>05. CONTACTO</h3> */}
